@@ -18,14 +18,12 @@ from django.contrib import admin
 from django.urls import path
 
 from task2.views import func_template, class_template
-from task3.views import home_task3, market, cart
+from task4.views import home,market,cart
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('class/',  class_template.as_view()),
     path('func/', func_template),
-    path('class/', class_template.as_view()),
-    path('home/', home_task3.as_view()),
-    path('home/market/', market.as_view()),
-    path('home/shopping_cart/', cart.as_view()),
+    path('', home),]
 
-]
